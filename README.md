@@ -1,6 +1,6 @@
 # Dummy Microservice
 
-This dummy microservice acts to be as a middle person between the Custom Channel and 
+This dummy microservice acts to be as a middle server between the Custom Channel and 
 third-party chat such as local SMS providers for better market penetration.
 
 ## Feature
