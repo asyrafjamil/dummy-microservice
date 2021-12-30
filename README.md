@@ -20,7 +20,7 @@ third-party chat such as local SMS providers for better market penetration.
 
 ## Environment Variables
 To develop the app, you will need to add the following environment variables to your .env file
-
+`APP_URL`
 
 `APP_PORT`
 
