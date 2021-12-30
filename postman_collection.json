@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "d91903ae-d64f-4028-9e26-3341289cf89e",
-		"name": "Dummy Server",
+		"_postman_id": "a4e603ef-deb2-49ea-8a08-c46da52b9826",
+		"name": "Dummy Server Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/",
+					"raw": "http://localhost:3030/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "3030",
 					"path": [
 						""
 					]
