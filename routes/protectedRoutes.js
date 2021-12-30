@@ -1,4 +1,4 @@
-const sendMessageController = require('../controllers/sendMessageController');
+const sendMessageController = require('../controllers/sendMessageIdController');
 const validator = require('../middlewares/validator');
 const {check} = require('express-validator');
 
