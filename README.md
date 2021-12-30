@@ -45,7 +45,7 @@ Refer env.example file from the repository.
 
     6. Copy the channel token and paste it to CHANNEL_TOKEN variable in .env file.
 
-    7. Download the Postman collection from the repository and open the collection.
+    7. Download the Postman collection from the repository and open the collection. The file's name is postman_collection.json.
 
     8. Here is the fun part, you may call the API with POST request method to retrieve the mId. 
     For example: https://dsadsa2313.ngrok.io/message-id to retrieve the mId 
