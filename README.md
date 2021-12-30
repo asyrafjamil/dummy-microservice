@@ -16,7 +16,7 @@ third-party chat such as local SMS providers for better market penetration.
 
 
 ## API Flow Diagram
-<p align='center'> <img src="readme_files/Chatbot_API2.png" height="400"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
+<p align='center'> <img src="docs/Dummy_Microservice_API.drawio.png" height="500"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
 
 ## Environment Variables
 To develop the app, you will need to add the following environment variables to your .env file
