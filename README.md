@@ -62,7 +62,7 @@ Refer env.example file from the repository.
 
 ## Output
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<p align='center'> <img src="docs/Postman_mId_Output.png" height="500"/></p> <p align='center'> Figure 2 : Example of mId Output </p> 
 
 
 ## FAQ
