@@ -1,9 +1,9 @@
 /**
  * Single action controller method
  *
- * @route POST /message-id
+ * @route POST /messages
  * @description Return the mID.
- * @access public
+ * @access protected
  *
  * @param {*} req Request object
  * @param {*} res Response object

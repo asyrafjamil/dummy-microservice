@@ -1,22 +1,18 @@
-# Dummy Microservice
+# Middle Server
 
-This dummy microservice acts to be as a middle server between the Custom Channel and 
+This application is a middle server between the Custom Channel and 
 third-party chat such as local SMS providers for better market penetration.
-
-## Feature
-- Return the mId (message id). 
-
 
 ## List Of APIs
 
 | No. | Method | API Endpoint | Description | Authorization | Request Body (Data Type)
 |--- | ---- | ------ | ------------------ |  ---------- | ---------- |
 | 1 | GET | / | Checks API health | none | none
-| 2 | POST| /message-id | To return mId | Bearer Token | message (array), channelId (integer), contactId (integer)
+| 2 | POST| /messages | To return mId | Bearer Token | message (array), channelId (integer), contactId (integer)
 
 
 ## API Flow Diagram
-<p align='center'> <img src="docs/Dummy_Microservice_API.drawio.png" height="500"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
+<p align='center'> <img src="docs/API_Flow.drawio.png" height="500"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
 
 ## Environment Variables
 To develop the app, you will need to add the following environment variables to your .env file
@@ -48,7 +44,7 @@ Refer env.example file from the repository.
     7. Download the Postman collection from the repository and open the collection. The file's name is postman_collection.json.
 
     8. Here is the fun part, you may call the API with POST request method to retrieve the mId. 
-    For example: https://dsadsa2313.ngrok.io/message-id to retrieve the mId 
+    For example: Call https://dsadsa2313.ngrok.io/messages using POST method to retrieve the mId 
 
     9. And we are done here! Please refer below for the example of the output. 
   
