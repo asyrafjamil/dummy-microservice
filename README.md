@@ -64,7 +64,10 @@ Refer env.example file from the repository.
 
 #### Is it compulsory to use 3000 as my app port?
 
-It is not compulsory to use `3000` as your app port. You may change it to other port such as `5000`, `8080` etc.
+It is not compulsory to use `3030` as your app port. You may change it to other port such as `5000`, `8080` etc in Dockerfile, docker-compose.yml and .env file.
+
+### Is it compulsory to run the server using docker?
+It is not compulsory, you may download the whole repository and run the server manually from the terminal.
 
 #### Why I could not run the server by using docker command?
 If you are using Linux, try to run `sudo docker compose-up` instead.
