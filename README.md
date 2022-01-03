@@ -64,7 +64,7 @@ Refer env.example file from the repository.
 
 It is not compulsory to use `3030` as your app port. You may change it to other port such as `5000`, `8080` etc in Dockerfile, docker-compose.yml and .env file.
 
-### Can I run the server manually instead of using docker?
+#### Can I run the server manually instead of using docker?
 Yes, you may run the server manually from the terminal by downloading the whole repository.
 
 #### Why I could not run the server by using docker command?
