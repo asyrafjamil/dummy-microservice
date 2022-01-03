@@ -60,7 +60,7 @@ Refer env.example file from the repository.
 
 ## FAQ
 
-#### Is it compulsory to use 3000 as my app port?
+#### Is it compulsory to use 3030 as my app port?
 
 It is not compulsory to use `3030` as your app port. You may change it to other port such as `5000`, `8080` etc in Dockerfile, docker-compose.yml and .env file.
 
