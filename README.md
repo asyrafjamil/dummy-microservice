@@ -46,7 +46,10 @@ Refer env.example file from the repository.
     For example: Call https://dsadsa2313.ngrok.io/messages using POST method to retrieve the mId 
 
     9. And we are done here! Please refer below for the example of the output. 
-  
+
+## Output
+
+<p align='center'> <img src="docs/Postman_mId_Output.png" height="500"/></p> <p align='center'> Figure 2 : Example of mId Output </p>   
 
   ## Important Memo
 
@@ -55,19 +58,14 @@ Refer env.example file from the repository.
   - The channelId in the `Request Body` section must be the same as CHANNEL_ID in .env file. Otherwise, error will be thrown.
   - The HTTP request method is POST.
 
-## Output
-
-<p align='center'> <img src="docs/Postman_mId_Output.png" height="500"/></p> <p align='center'> Figure 2 : Example of mId Output </p> 
-
-
 ## FAQ
 
 #### Is it compulsory to use 3000 as my app port?
 
 It is not compulsory to use `3030` as your app port. You may change it to other port such as `5000`, `8080` etc in Dockerfile, docker-compose.yml and .env file.
 
-### Is it compulsory to run the server using docker?
-It is not compulsory, you may download the whole repository and run the server manually from the terminal.
+### Can I run the server manually instead of using docker?
+Yes, you may run the server manually from the terminal by downloading the whole repository.
 
 #### Why I could not run the server by using docker command?
 If you are using Linux, try to run `sudo docker compose-up` instead.
