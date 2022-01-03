@@ -1,31 +1,12 @@
 {
 	"info": {
-		"_postman_id": "a4e603ef-deb2-49ea-8a08-c46da52b9826",
-		"name": "Dummy Server Copy",
+		"_postman_id": "e6f7fa2d-0e01-4d0f-be97-77b6b5045fb5",
+		"name": "Webhook Call",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Check Health",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3030/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3030",
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Send Message",
+			"name": "https://app.respond.io/custom/channel/webhook",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -38,16 +19,10 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "B",
-						"value": "",
-						"type": "default"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"message\": [],\n    \"channelId\" : dsa,\n    \"contactId\" : 1\n}",
+					"raw": "{\n  \"channelId\": \"1\",\n  \"contactId\": \"2\",\n\t\"events\": [{\n    \"type\": \"message\",\n    \"mId\": \"xcvzzxcxczxczxc\",\n    \"timestamp\": 2132131321000, \n    \"message\": {\n        \"type\" : \"text\", \n        \"text\" : \"hello world\"\n        },\n    \"status\": {\n\t\t\t\"value\": \"delivered\",\n\t\t\t\"message\": \"ok\"\n\t\t}\n  }],\n  \"contact\": {\n    \"firstName\": \"Leo\",\n    \"lastName\": \"Kiat\",\n    \"profilePic\": \"https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/07/08/14/prettygirls.jpg?width=990&auto=webp&quality=75&crop=982:726,smart\",\n    \"locale\": \"en_US\",\n    \"countryCode\": \"MY\",\n    \"timezone\": 8,\n    \"email\": \"leo@rocketbots.io\",\n    \"phone\": \"+60123456789\",\n    \"language\": \"en\"\n  }\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -55,14 +30,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3030/message-id",
-					"protocol": "http",
+					"raw": "https://app.respond.io/custom/channel/webhook",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"app",
+						"respond",
+						"io"
 					],
-					"port": "3030",
 					"path": [
-						"message-id"
+						"custom",
+						"channel",
+						"webhook"
 					]
 				}
 			},
