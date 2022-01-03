@@ -8,7 +8,7 @@ third-party chat such as local SMS providers for better market penetration.
 | No. | Method | API Endpoint | Description | Authorization | Request Body (Data Type)
 |--- | ---- | ------ | ------------------ |  ---------- | ---------- |
 | 1 | GET | / | Checks API health | none | none
-| 2 | POST| /messages | To return mId | Bearer Token | message (array), channelId (integer), contactId (integer)
+| 2 | POST| /message | To retrieve message and return mId to Custom Channel and Third Party Chat | Bearer Token | message (array), channelId (integer), contactId (integer)
 
 
 ## API Flow Diagram
@@ -16,7 +16,6 @@ third-party chat such as local SMS providers for better market penetration.
 
 ## Environment Variables
 To develop the app, you will need to add the following environment variables to your .env file
-`APP_URL`
 
 `APP_PORT`
 
