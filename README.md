@@ -45,10 +45,6 @@ Refer env.example file from the repository.
 
     8. And we are done here! Please refer below for the example of the output. 
 
-## Output
-
-<p align='center'> <img src="docs/Postman_mId_Output.png" height="500"/></p> <p align='center'> Figure 2 : Example of mId Output </p>   
-
   ## Important Memo
 
   - Include the bearer token from the CHANNEL_TOKEN variable in the `Authorization` section or `Headers` section. Either way is fine.
