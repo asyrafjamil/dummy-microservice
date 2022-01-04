@@ -30,7 +30,7 @@ Refer env.example file from the repository.
     
     2. Run 'docker-compose up'.
     
-    3. When your server is running, expose your server to the public internet by using ngrok. 
+    3. When your server is running, expose your server to the public internet by using ngrok. Run 'ngrok http 3030' in ngrok command prompt.
     Please refer https://ngrok.com/download to download.
 
     4. When you have exposed your server, you will get a URL from ngrok.
@@ -55,6 +55,7 @@ Refer env.example file from the repository.
   - Include the message, channelId and contactId in the `Request Body` section. 
   - The channelId in the `Request Body` section must be the same as CHANNEL_ID in .env file. Otherwise, error will be thrown.
   - The HTTP request method is POST.
+  - Postman collection is avaiable in the docs folder to test out the webhook URL.
 
 ## FAQ
 
