@@ -8,42 +8,27 @@ third-party chat such as local SMS providers for better market penetration.
 | No. | Method | API Endpoint | Description | Authorization | Request Body (Data Type)
 |--- | ---- | ------ | ------------------ |  ---------- | ---------- |
 | 1 | GET | / | Checks API health | none | none
-| 2 | POST| /message | To retrieve message and return mId to Custom Channel and Third Party Chat | Bearer Token | message (array), channelId (integer), contactId (integer)
+| 2 | POST| /message | To retrieve message and return mId to Custom Channel and Third Party Chat | Bearer Token | message (Object), channelId (String), contactId (String)
 
 
-## API Flow Diagram
+## /message API Flow Diagram
 <p align='center'> <img src="docs/API_Flow.drawio.png" height="500"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
 
-## Environment Variables
-To develop the app, you will need to add the following environment variables to your .env file
+## Run Server Locally
+    1. Copy the .env.sample and paste it to .env file.
 
-`APP_PORT`
+    2. Run 'npm install' and then run 'docker-compose up'.
 
-`CHANNEL_TOKEN`
-
-`CHANNEL_ID`
-
-Refer env.example file from the repository.
-
-## Run Locally
-    1. Copy the .env.sample and paste it to .env file. 
-    
-    2. Run 'docker-compose up'.
-    
-    3. When your server is running, expose your server to the public internet by using ngrok. Run 'ngrok http 3030' in ngrok command prompt.
+    3. Run 'ngrok http 3030' in a new terminal to expose server in public.
     Please refer https://ngrok.com/download to download.
 
-    4. When you have exposed your server, you will get a URL from ngrok.
-    For example: https://dsadsa2313.ngrok.io/
+    4. Copy the ngrok URL. (You can get it from http://localhost:4040/status)
 
-    5. Copy the ngrok URL and paste it to the Custom Channel configuration and you will receive a channel token.
+    5. Paste it to the Custom Channel configuration and choose a type to create channel in platform.
 
-    6. Copy the channel token and paste it to CHANNEL_TOKEN variable in .env file.
+    6. Copy the token, channelId after channel is created and paste it to CHANNEL_TOKEN, CHANNEL_ID variables in .env file.
 
-    7. Here is the fun part, you may call the API with POST request method to retrieve the mId. 
-    For example: Call https://dsadsa2313.ngrok.io/messages using POST method to retrieve the mId 
-
-    8. And we are done here! Please refer below for the example of the output. 
+    7. Run 'docker restart custom_channel' to restart server.
 
   ## Important Memo
 
@@ -51,7 +36,7 @@ Refer env.example file from the repository.
   - Include the message, channelId and contactId in the `Request Body` section. 
   - The channelId in the `Request Body` section must be the same as CHANNEL_ID in .env file. Otherwise, error will be thrown.
   - The HTTP request method is POST.
-  - Postman collection is avaiable in the docs folder to test out the webhook URL.
+  - Postman collection is avaiable in the docs folder to test out the webhook URL. Please fill up the environment variable before triggering.
 
 ## FAQ
 
