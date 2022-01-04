@@ -1,13 +1,12 @@
 {
-  "name": "dummy-server",
+  "name": "middle-server",
   "version": "1.0.0",
-  "description": "Dummy Server that provides APIs.",
+  "description": "A Middle Server application with several APIs.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start" : "nodemon server.js"
   },
-  "author": "Asyraf Jamil",
+  "author": "respond.io",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
