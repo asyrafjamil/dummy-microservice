@@ -11,8 +11,8 @@ third-party chat such as local SMS providers for better market penetration.
 | 2 | POST| /message | To retrieve message and return mId to Custom Channel and Third Party Chat | Bearer Token | message (Object), channelId (String), contactId (String)
 
 
-## /message API Flow Diagram
-<p align='center'> <img src="docs/API_Flow.drawio.png" height="500"/></p> <p align='center'> Figure 1 : API No. 2 </p> 
+## API Flow Diagram
+<p align='center'> <img src="docs/API_Flow.drawio.png" height="500"/></p> <p align='center'> Figure 1 : POST /message Diagram </p> 
 
 ## Run Server Locally
     1. Copy the .env.sample and paste it to .env file.
