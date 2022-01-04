@@ -17,18 +17,16 @@ third-party chat such as local SMS providers for better market penetration.
 ## Run Server Locally
     1. Copy the .env.sample and paste it to .env file.
 
-    2. Run 'npm install' and then run 'docker-compose up'.
-
-    3. Run 'ngrok http 3030' in a new terminal to expose server in public.
+    2. Run 'ngrok http 3030' in a new terminal to expose server in public.
     Please refer https://ngrok.com/download to download.
 
-    4. Copy the ngrok URL. (You can get it from http://localhost:4040/status)
+    3. Go to 'http://localhost:4040/status' in broswer to copy the ngrok URL.
 
-    5. Paste it to the Custom Channel configuration and choose a type to create channel in platform.
+    4. In Platform, paste the ngrok URL to the Custom Channel configuration and choose a type (phone or custom) to create channel.
 
-    6. Copy the token, channelId after channel is created and paste it to CHANNEL_TOKEN, CHANNEL_ID variables in .env file.
+    5. Copy the token, channelId after channel is created and paste it to CHANNEL_TOKEN, CHANNEL_ID variables in .env file.
 
-    7. Run 'docker restart custom_channel' to restart server.
+    6. Run 'docker-compose up' to start the server.
 
   ## Important Memo
 
