@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/message', (req, res)=> {
-  // Get the brearer token from request header.
+  // Get the bearer token from request header.
   const bearerToken = req.headers.authorization;
   if (!bearerToken) {
     return res.status(404).send({
