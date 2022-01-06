@@ -1,41 +1,48 @@
-/**
- * Inside this file, the route is placed between the Custom Channel and 3rd Party Chat application.
- * The process happens here.
- */
-
-const {nanoid} = require('nanoid');
+/* eslint-disable new-cap */
 const express = require('express');
-// eslint-disable-next-line new-cap
+
+/**
+ * TeleSign (SMS Provider) configuration
+ */
+const TeleSignSDK = require('telesignsdk');
+const telesign = new TeleSignSDK(
+    'FFFFFFFF-EEEE-DDDD-1234-AB1234567890', // customerId
+    'EXAMPLE----TE8sTgg45yusumoN4BYsBVkh+yRJ5czgsnCehZaOYldPJdmFh6NeX8kunZ2zU1YWaUw/0wV6xfw==', // apiKey
+    'https://rest-api.telesign.com', // restEndpoint
+);
+
+/**
+ * Respond.io custom channel API Token
+ */
+const CHANNEL_API_TOKEN = '<API Token>';
+
+
 const router = express.Router();
 
-router.get('/', function(req, res) {
-  res.status(200).send('API is healthy.');
-});
-
-router.post('/message', (req, res)=> {
-  // Get the bearer token from request header.
+router.post('/message', (req, res) => {
+  /**
+     * Authentication
+     * Get the bearer token from request header
+     * Check token against channel API token provided by respond.io
+     */
   const bearerToken = req.headers.authorization;
-  if (!bearerToken) {
-    return res.status(401);
-  }
-
-  // Compare the token from header with the token from environment variable.
-  const token = bearerToken.substring(7, bearerToken.length);
-  if (process.env.CHANNEL_TOKEN !== token) {
+  if (!bearerToken || bearerToken.substring(7, bearerToken.length) !== CHANNEL_API_TOKEN) {
     return res.status(401);
   }
 
   /**
-   * User should retrieve the message from the req.body,
-   * transform the message and send it out,
-   * return the mId (ID of sent message).
-   * Output example:
-   * "mId": "_CX_faR8Ro_yTzhf4AtI3"
-   */
+     * Sending SMS using third party sms provider i.e (TeleSign)
+     */
+  const phoneNumber = req.body.contactId;
+  const message = req.body.message.text;
 
-  res.status(200).send({
-    mId: nanoid(),
-  });
+  telesign.sms.message((e, r) => {
+            e ? res.status(400).send({'error': {'message': e.res.message}}) :
+                res.send({mId: r.reference_id});
+  },
+  phoneNumber,
+  message,
+  );
 });
 
 module.exports = router;
